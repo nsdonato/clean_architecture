@@ -1,5 +1,5 @@
-# Course Overview
-    Course Overview
+# 01 - Course Overview
+    1.1 - Course Overview
         Clean Architecture: es un conjunto de practicas utilizadas para crear una arquitectura de software comprensible, flexible comprobable y mantenible.
 
         Es un reemplazo de la arquitectura tradicional (centrada en base de datos de tres capas) que usamos durante decadas. 
@@ -14,11 +14,11 @@
             
         Estas prácticas arquitectónicas hacen que su arquitectura sea más comprobable, más fácil de mantener y permite que la arquitectura evolucione con el tiempo. 
         
-# Introduction
-    Introduction
+# 02 - Introduction
+    2.1 - Introduction
         Da un ejemplo sobre dos diferentes tipos de arquitectos (de edificios), para dar una introducción al tema...
 
-    Overview
+    2.2 - Overview
         Resumen del curso... 
         
         1) Se discute sobre arquitectura limpia, qué es y por qué es importante. 
@@ -39,7 +39,7 @@
             
             * Si estas interesado en profundizar mucho más, lo guiaré en la dirección de fuentes de información adicionales al final del último módulo de este curso. 
 
-    What Is Clean Code?
+    2.3 - What Is Clean Code?
         
         Qué es la arquitectura de software:
             Si bien no es facil de definir, hay conceptos generales en los que estar de acuerdo.
@@ -98,7 +98,7 @@
                 
                 * Necesitamos diseñar nuestra arquitectura primero para los habitantes de la arquitectura, todo lo demás, nuestros egos, nuevos marcos brillantes, optimizaciones de rendimiento, etc., deberían ser una preocupación secundaria. *
 
-    Why Invest in Clean Code?
+    2.4 - Why Invest in Clean Code?
         
         La justificación principal para invertir en arquitectura limpia es principalmente un argumento de costo beneficio. 
         
@@ -118,7 +118,7 @@
          
          El objetivo final de un arquitecto es tomar decisiones que intercambien cosas como la complejidad, de tal manera que minimice el costo y maximice el valor comercial, maximizando así el retorno de la inversión del proyecto de software en su conjunto.          
 
-    Demo
+    2.5 - Demo
         Muestra una app sencilla de ventas con diferentes menus que traen dif info, los proyectos que tiene la solución:
 
         Resuemen de la tecnologia que usó:
@@ -149,7 +149,7 @@
            
            Repo de él: https://github.com/matthewrenze/clean-architecture-demo
 
-    Summary
+    2.6 Summary
         En este módulo, primero vimos una descripción general del curso, cubrimos el propósito del curso, su enfoque y la audiencia prevista. Luego, aprendimos acerca de la arquitectura limpia, qué es, por qué es importante y cómo el contexto es crítico con cada decisión arquitectónica que tomamos. Luego vimos una demostración en la que presentamos la aplicación que usaremos para todas las demostraciones en este curso. Vimos la interfaz de usuario, las tecnologías, los archivos del proyecto y la base de datos. En el próximo módulo aprenderemos sobre arquitecturas centradas en el dominio.
 
 # Domain-centric Architecture
