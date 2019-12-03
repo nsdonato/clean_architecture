@@ -1,11 +1,11 @@
 # Course Overview
     Course Overview
-        Habla sobre Clean Architecture: es un conjunto de practicas utilizadas para crear una arquitectura de software comprensible, flexible comprobable y mantenible.
+        Clean Architecture: es un conjunto de practicas utilizadas para crear una arquitectura de software comprensible, flexible comprobable y mantenible.
 
         Es un reemplazo de la arquitectura tradicional (centrada en base de datos de tres capas) que usamos durante decadas. 
 
         Vamos a aprender Clean Architecture, que es y que es importante. 
-        Después aprenderá sobre una serie de prácticas arquitectónicas modernas, com:
+        Después sobre una serie de prácticas arquitectónicas modernas, como:
             - la arquitectura centrada en el dominio
             - las capas de aplicación
             - la separación de responsabilidad por consulta de comandos (CQRS) 
@@ -25,41 +25,37 @@
         2) Arquitecturas centradas en el dominio y por qué podríamos querer colocar nuestro modelo de dominio en el         centro de nuestra arquitectura. 
         3) Capa de aplicación y por qué podríamos querer incorporar los casos de uso de nuestro sistema en una capa de      aplicación. 
         4) Analizaremos la separación de responsabilidad de consulta de comando (CQRS), y por qué podríamos querer          separar las pilas de comandos y consultas de nuestra arquitectura. 
-        5) Práctica de la arquitectura de gritos y cómo puede ayudarnos a organizar nuestra estructura de carpetas y        espacios de nombres usando la cohesión funcional. 
+        5) Práctica de la arquitectura de gritos?? y cómo puede ayudarnos a organizar nuestra estructura de carpetas y      espacios de nombres usando la cohesión funcional. 
         6) Microservicios y cómo podríamos querer dividir horizontalmente nuestra aplicación por contextos limitados. 7) Prácticas de arquitectura comprobables y cómo nuestra arquitectura hace que las pruebas sean más fáciles,        no más difíciles
         8) Cómo podemos evolucionar nuestra arquitectura para reducir los riesgos debido a la incertidumbre en los          requisitos cambiantes durante la vida del proyecto. 
         
         Además, en cada módulo de este curso veremos código de muestra de una aplicación creada utilizando estos diversos patrones, prácticas y principios. 
         
-        Debido a que un tema tan amplio como la arquitectura de software puede descontrolarse muy rápido, tendremos que mantener este curso limitado de varias maneras clave. 
+        Debido a que es un tema tan amplio como la arquitectura de software puede descontrolarse muy rápido, tendremos que mantener este curso limitado de varias maneras clave. 
         
             1) Nos centraremos en la arquitectura para crear aplicaciones empresariales. Es decir, aplicaciones             diseñadas para resolver problemas de negocios
             2) Las prácticas arquitectónicas en las que nos centraremos están diseñadas para soportar un proceso de         desarrollo de software ágil. 
             3)  Nos centraremos en las siete ideas principales que me han ayudado limpiar mi arquitectura más. 
             
-            * Si está interesado en profundizar mucho más, lo guiaré en la dirección de fuentes de información adicionales al final del último módulo de este curso. 
+            * Si estas interesado en profundizar mucho más, lo guiaré en la dirección de fuentes de información adicionales al final del último módulo de este curso. 
 
     What Is Clean Code?
         
         Qué es la arquitectura de software:
             Si bien no es facil de definir, hay conceptos generales en los que estar de acuerdo.
-            1) Es de alto nivel.
-            2) Tiene que ver con la estructura del software o cómo se organizan las cosas. 
-            3) Típicamente involucra capas, que son particiones verticales del sistema. 
-            4) Generalmente involucra componentes de algún tipo, que son típicamente particiones horizontales dentro        de cada capa. 
-            5) Involucra las relaciones entre estas cosas, así es como todas están conectadas entre sí. 
+                1) Es de alto nivel.
+                2) Tiene que ver con la estructura del software o cómo se organizan las cosas. 
+                3) Típicamente involucra capas, que son particiones verticales del sistema. 
+                4) Generalmente involucra componentes de algún tipo, que son típicamente particiones horizontales           dentro de cada capa. 
+                5) Involucra las relaciones entre estas cosas, así es como todas están conectadas entre sí. 
             
             Cuando hablamos de arquitectura, podemos centrarnos en uno de los muchos niveles de abstracción. 
             
-                Sistema
-              Sub-Sistemas
-               Sub-CApas
-            
-            En la parte superior: el sistema (representación más abstracta del software) 
-                -> que se puede representar como un conjunto de uno o más subsistemas 
-                    -> que generalmente se dividen en una o más capas, 
-                        -> que a menudo se subdividen en una o más componentes, 
-                            -> que contienen clases que contienen datos y métodos. 
+            SISTEMA                  En la parte superior: el sistema (representación más abstracta del software) 
+              SUB-SUBSISTEMAS        -> que se puede representar como un conjunto de uno o más subsistemas 
+                CAPAS                -> que generalmente se dividen en una o más capas, 
+                  COMPONENTES        -> que a menudo se subdividen en una o más componentes, 
+                    CLASES Y METODOS -> que contienen clases que contienen datos y métodos. 
             
             Creo que todos tenemos una intuición general sobre cómo se ve la arquitectura desordenada versus cómo se ve la arquitectura limpia. 
                 
@@ -71,23 +67,24 @@
                     - Cuando una pieza es demasiado grande, la cortamos en componentes más pequeños
                     - Tiene una bonita capa de presentación montada sobre una pila comestible de funcionalidad. 
                     
-            Entonces, en términos más técnicos, ¿qué es la arquitectura mala o desordenada? 
+            Entonces, en términos más técnicos: 
             
-            - Compleja
-            - Es incoherente (las partes no parecen encajar).
-            - Rígido, es decir, la arquitectura resiste el cambio o dificulta la evolución de la arquitectura con el tiempo. 
-            - Frágil, tocar una parte del código aquí podría romper otra parte del código en otro lugar
-            - No es comprobable, es decir, realmente te gustaría escribir pruebas unitarias y pruebas de integración, pero la arquitectura te combate en cada paso del camino y, en última instancia, todas estas cosas conducen a una arquitectura que no se puede mantener durante la vida del proyecto. 
-            
-            Arquitectura buena y limpia:
-                - Simple o al menos es tan compleja como es necesaria.
-                - Comprensible, es fácil razonar sobre el software en su conjunto
-                - Es flexible, podemos adaptar fácilmente el sistema para cumplir con los requisitos cambiantes
-                - Emergente, la arquitectura evoluciona a lo largo de la vida del proyecto.
-                - Comprobable, la arquitectura hace pruebas más fácil, no más difícil
-                - Sostenible durante la vida del proyecto.
+                ¿qué es la arquitectura mala o desordenada? 
+                    - Compleja
+                    - Es incoherente (las partes no parecen encajar).
+                    - Rígido, es decir, la arquitectura resiste el cambio o dificulta la evolución de la arquitectura con el tiempo. 
+                    - Frágil, tocar una parte del código aquí podría romper otra parte del código en otro lugar
+                    - No es comprobable, es decir, realmente te gustaría escribir pruebas unitarias y pruebas de integración, pero la arquitectura te combate en cada paso del camino y, en última instancia, todas estas cosas conducen a una arquitectura que no se puede mantener durante la vida del proyecto. 
                 
-                HABITANTES - ARQUITECTOS - MAQUINA-
+                Arquitectura buena y limpia:
+                    - Simple o al menos es tan compleja como es necesaria.
+                    - Comprensible, es fácil razonar sobre el software en su conjunto
+                    - Es flexible, podemos adaptar fácilmente el sistema para cumplir con los requisitos cambiantes
+                    - Emergente, la arquitectura evoluciona a lo largo de la vida del proyecto.
+                    - Comprobable, la arquitectura hace pruebas más fácil, no más difícil
+                    - Sostenible durante la vida del proyecto.
+                
+                HABITANTES (ok) - ARQUITECTOS (x) - MAQUINA (x)
 
                 La forma en que resumí la arquitectura limpia es que es una arquitectura diseñada para los habitantes de la arquitectura.
                 
