@@ -1,0 +1,69 @@
+# Course Overview
+    Course Overview
+        Habla sobre Clean Architecture: es un conjunto de practicas utilizadas para crear una arquitectura de software comprensible, flexible comprobable y mantenible.
+
+        Es un reemplazo de la arquitectura tradicional (centrada en base de datos de tres capas) que usamos durante decadas. 
+
+        Vamos a aprender Clean Architecture, que es y que es importante. 
+        Después aprenderá sobre una serie de prácticas arquitectónicas modernas, com:
+            - la arquitectura centrada en el dominio
+            - las capas de aplicación
+            - la separación de responsabilidad por consulta de comandos (CQRS) 
+            - la organización funcional 
+            - las arquitecturas de microservicios. 
+            
+        Estas prácticas arquitectónicas hacen que su arquitectura sea más comprobable, más fácil de mantener y permite que la arquitectura evolucione con el tiempo. 
+        
+# Introduction
+    Introduction
+        Da un ejemplo sobre dos diferentes tipos de arquitectos (de edificios), para dar una introducción al tema...
+
+    Overview
+
+
+    What Is Clean Code?
+    Why Invest in Clean Code?
+    Demo
+    Summary
+
+# Domain-centric Architecture
+    Introduction
+    Domain-centric Architecture
+    Demo
+    Summary
+
+# Application Layer
+    Introduction
+    Application Layer
+    Demo
+    Summary
+
+# Commands and Queries
+    Introduction
+    Commands and Queries
+    Demo
+    Summary
+
+# Functional Organization
+    Introduction
+    Functional Organization
+    Demo
+    Summary
+
+# Microservices
+    Introduction
+    Microservices
+    Demo
+    Summary
+
+# Testable Architecture
+    Introduction
+    Testable Architecture
+    Demo
+    Summary
+
+# Evolving the Architecture
+    Introduction
+    Evolving the Architecture
+    Where to Go Next
+    Course Summary
