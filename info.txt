@@ -154,7 +154,46 @@
 
 # Domain-centric Architecture
     Introduction
+        Introducción
+            Módulo aprenderemos sobre la arquitectura centrada en el dominio. 
+            
+            Primero aprenderemos sobre la arquitectura centrada en el dominio y cómo difiere de la arquitectura centrada en la base de datos. A continuación, aprenderemos sobre tres tipos de arquitecturas centradas en el dominio. Luego, aprenderemos sobre los pros y los contras de implementar una arquitectura centrada en el dominio. Finalmente, veremos una demostración de nuestra aplicación de demostración centrada en el dominio, así que comencemos.
+
     Domain-centric Architecture
+        Todos sabemos que la tierra está en el centro del sistema solar, y que el sol, la luna y los planetas giran alrededor de la tierra. ¿Correcto? Bueno, ya no lo hacen, pero lo hicieron al mismo tiempo. Sin embargo, un tipo muy inteligente llamado Nicolaus Copernicus cambió la forma en que vemos nuestro sistema solar. En lugar de suponer que la Tierra estaba en el centro del sistema solar, el viejo Nick tuvo la loca idea de que el sol podría estar en el centro de nuestro sistema solar. Este cambio de perspectiva resultó para producir un mejor modelo del sistema solar, en el sentido de que es más simple y, sin embargo, proporciona más poder explicativo. 
+        
+        Un cambio similar en el pensamiento está ocurriendo en el mundo de la arquitectura de software mientras hablamos. 
+        la clásica arquitectura centrada en la base de datos de tres capas:
+             Su característica clave es que la interfaz de usuario, la lógica empresarial y la capa de acceso a datos giran en torno a la base de datos. 
+             La base de datos es esencial y, por lo tanto, está en el centro de esta arquitectura. 
+             
+        Sin embargo, una nueva perspectiva ha cambiado la forma en que muchos de nosotros vemos nuestra arquitectura. En lugar de tener la base de datos en el centro de nuestra arquitectura, algunos de nosotros estamos poniendo el dominio en el centro y haciendo que la base de datos sea solo un detalle de implementación fuera de la arquitectura. Aquí el dominio es esencial, y la base de datos es solo un detalle. 
+        
+        Entonces, ¿por qué ha sucedido esto? Creo que este cambio de perspectiva se resume mejor en una cita de Robert C. Martin, más conocido en la industria del software como Tío Bob. 
+        
+        Él dice, "la primera preocupación del arquitecto es asegurarse de que la casa sea utilizable,no es asegurarse de que la casa esté hecha de ladrillo". Este cambio en la perspectiva arquitectónica está siendo causado por un cambio en la perspectiva sobre lo que es esencial en una arquitectura versus lo que es solo un detalle de implementación. 
+        
+        Usando nuestra metáfora de la arquitectura del edificio, cuando estamos construyendo una casa, ¿qué es esencial versus qué es un detalle? El espacio dentro de una casa es esencial. Sin un espacio vacío para habitar la casa no serviría de nada. La usabilidad de la casa es esencial. Si la casa no contuviera habitaciones y características para satisfacer nuestras necesidades primarias, nuevamente, la casa no cumpliría su propósito. 
+        
+        Sin embargo, el material de construcción es solo un detalle de implementación. Podríamos construirlo de ladrillo, piedra, madera o muchos otros materiales. 
+        
+        Además, la ornamentación es solo un detalle. Todavía podríamos vivir en esta casa si tenía molduras victorianas, adornos dorados, puertas francesas o ninguna ornamentación. Las cosas que son esenciales en una casa son así porque satisfacen las necesidades primarias de los habitantes de la casa. Todo lo demás es solo un detalle de implementación. En arquitectura limpia, lo mismo es cierto. Lo esencial son las cosas que apoyan las necesidades primarias de los habitantes de la arquitectura. El modelo de dominio es esencial. Sin él, el sistema no representaría los modelos mentales de los usuarios. 
+        
+        Los casos de uso son esenciales. Sin ellos, el sistema no resolvería los problemas del usuario. 
+        
+        Sin embargo, la presentación es solo un detalle. Podemos entregar la IU en formularios web, ASP. NET MVC o como una aplicación de JavaScript de una sola página, y la persistencia es solo un detalle. 
+        
+        Podemos almacenar los datos en una base de datos relacional, no en una base de datos SQL o como archivos JSON antiguos. Ahora no me malinterpreten, las tecnologías de presentación y persistencia son muy importantes. Simplemente no son esenciales para resolver el problema que el usuario intenta resolver con la aplicación. 
+        
+        Una vez que hemos cambiado nuestra perspectiva sobre lo que es esencial frente a lo que es un detalle en la arquitectura de software, podemos comenzar a ver por qué está ocurriendo una transición de la arquitectura centrada en la base de datos a la arquitectura centrada en el dominio. 
+        
+        Con las arquitecturas centradas en la base de datos, la base de datos es esencial, por lo que la base de datos está en el centro de la aplicación y todas las dependencias apuntan hacia la base de datos. Con las arquitecturas centradas en el dominio, el dominio y los casos de uso son esenciales, y la presentación y la persistencia son solo un detalle, por lo que el dominio está en el centro de la aplicación envuelto en una capa de aplicación y todas las dependencias apuntan hacia el dominio. 
+        
+        Así que ahora echemos un vistazo a algunos tipos de arquitecturas centradas en el dominio. 
+            Primero, tenemos la arquitectura hexagonal de Alistair Cockburn. Es una arquitectura en capas con la capa de aplicación y, por lo tanto, transitivamente, el dominio en el centro de la arquitectura. Además, es una arquitectura de complemento que incluye puertos y adaptadores. Esencialmente, las capas externas de la arquitectura están adaptando la capa de aplicación interna a los diversos medios de presentación, medios de persistencia y sistemas externos. Puede ejecutar, y por lo tanto probar, un aislamiento en toda esta arquitectura de aplicación sin una interfaz de usuario, una base de datos o dependencias externas. 
+            
+            A continuación, con la arquitectura de cebolla de Jeffrey Palermo. Esta también es una arquitectura en capas con el dominio en el centro rodeado por una capa de aplicación. La capa exterior
+
     Demo
     Summary
 
