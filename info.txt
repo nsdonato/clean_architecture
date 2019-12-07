@@ -195,6 +195,8 @@
             A continuación, con la arquitectura de cebolla de Jeffrey Palermo. Esta también es una arquitectura en capas con el dominio en el centro rodeado por una capa de aplicación. La capa exterior
 
     Demo
+        
+
     Summary
 
 # Application Layer
