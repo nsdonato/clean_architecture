@@ -12,6 +12,9 @@ Matthew Renze
 Matthew is a data science consultant, author, and international public speaker. He has over 17 years of professional experience working with tech startups to Fortune 500 companies. He is a...
 
 > Course info: Level - Beginner
+
 > Rating: 4.6 stars with 993 raters(993)
+
 > Duration: 2h 21m
+
 > Released: 11 Jan 2017
